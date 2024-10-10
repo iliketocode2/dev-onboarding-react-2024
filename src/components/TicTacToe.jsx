@@ -61,15 +61,16 @@ export default function TicTacToe({ boardWidth, boardHeight }) {
    * sets currentTurn to "X" and sets winner to null
    */
   function resetGame() {
+    console.log("Resetting the game!");
     // Clear the Tic-Tac-Toe board 
     // Hint: Use the generateEmptyBoard function!
-
-
+    generateEmptyBoard(boardWidth, boardHeight);
+    
     // Set currentTurn to "X"
-
+    setCurrentTurn("X");
 
     // Set winner to null
-
+    setWinner(null);
 
   }
 
@@ -230,7 +231,7 @@ export default function TicTacToe({ boardWidth, boardHeight }) {
         <button
           className="text-center border p-2 rounded bg-gray-100 
           hover:bg-gray-200"
-          onClick={() => alert("BUG: Replace this with something else...")}
+          onClick={() => resetGame()}
         >
           Reset Game
         </button>
